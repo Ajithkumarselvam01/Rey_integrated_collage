@@ -1032,13 +1032,20 @@ ul.nav {
 }
 
   .logo-slider {
-    background: #E1F2FF;
     padding: 30px;
+}
+.logo_sec h2 {
+  font-size: 40px;
+  line-height: 45px;
+  margin-bottom: 40px;
+  font-family: 'Anybody-medium';
+  text-align: center;
 }
 .logo-item {
   text-align: center;
 }
 section.logo_sec {
+  background: #E1F2FF;
   padding: 30px 0;
 }
 .logo-item img {
