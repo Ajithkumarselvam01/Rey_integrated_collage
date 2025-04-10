@@ -329,7 +329,7 @@ input#nameInput {
 }
 .loan_btn a {
   background: #A70000;
-  padding: 5px 20px;
+  padding: 5px ;
   color: #fff;
   font-family: poppins;
   font-size: 16px;
@@ -535,14 +535,17 @@ section.certifications_sec {
   left: 0;
   right: 0;
   margin: auto;
-  top: 35%;
+  top: 15%;
 }
 .certifications_div_conent li {
   color: #393939;
   font-size: 18px;
   margin-bottom: 4px;
   font-family: 'Anybody-regular';
+  list-style: disc;
 }
+
+
 /* Admission Process  */
 .admission_process_div_main {
     display: flex;
@@ -1010,9 +1013,10 @@ ul.nav {
   padding: 10px 20px;
   background: #FFD400;
   font-family: poppins;
-  font-weight: 700;
-  font-size: 22px;
-  transform: translateY(15px);
+  font-weight: 600;
+  font-size: 20px;
+  transform: translateY(10px);
+  margin-right: 40px;
 }
 .cta_btn_new a {
   position: fixed;
@@ -1333,6 +1337,7 @@ section.student_exchange {
 .nav a {
   font-size: 14px;
   transform: translateY(0px);
+  margin-right: auto;
 }
 }
 @media screen and (max-width: 500px) {
