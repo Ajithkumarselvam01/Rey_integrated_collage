@@ -299,7 +299,7 @@ input#nameInput {
   font-family: 'ProtestStrike-regular';
   font-size: 60px;
   line-height: 60px;
-  text-shadow: 1.5px 1px 0 #fff;
+  text-shadow: 1.5px 1px 0 #000;
   text-transform: uppercase;
   color: #fff;
 }
@@ -324,13 +324,16 @@ input#nameInput {
 }
 .loan_btn {
   margin: 30px 0;
+  display: flex;
+  gap: 10px;
 }
 .loan_btn a {
   background: #A70000;
   padding: 5px 20px;
   color: #fff;
   font-family: poppins;
-  font-size: 20px;
+  font-size: 16px;
+  width: 50%;
 }
 /* Banner section */
 /* mobile_banner */
@@ -470,6 +473,7 @@ section.program_sec {
   background: #732DCE;
   font-family: 'Anybody-regular';
   padding: 5px;
+  text-align: center;
 }
 .program_div_img {
   padding: 10px;
@@ -531,6 +535,7 @@ section.certifications_sec {
   left: 0;
   right: 0;
   margin: auto;
+  top: 35%;
 }
 .certifications_div_conent li {
   color: #393939;
@@ -992,6 +997,58 @@ section.certificate_sec {
   border: 2px solid #fff;
   font-family: poppins;
 }
+.site-identity {
+  width: 50%;
+}
+nav.site-navigation {
+  width: 50%;
+}
+ul.nav {
+  float: right;
+}
+.nav a {
+  padding: 10px 20px;
+  background: #FFD400;
+  font-family: poppins;
+  font-weight: 700;
+  font-size: 22px;
+  transform: translateY(15px);
+}
+.cta_btn_new a {
+  position: fixed;
+  right: -45px;
+  top: 50%;
+  transform: rotate(-90deg);
+  background: #FFD400;
+  color: #000;
+  padding: 10px 15px;
+  font-weight: 500;
+  border-radius: 10px 10px 0 0;
+  z-index: 999;
+}
+
+  .logo-slider {
+    background: #E1F2FF;
+    padding: 30px;
+}
+.logo-item {
+  text-align: center;
+}
+section.logo_sec {
+  padding: 30px 0;
+}
+.logo-item img {
+  width: 100%;
+  max-width: 150px;
+  transition: transform 0.3s;
+}
+
+.logo-item img:hover {
+  transform: scale(1.1);
+}
+.logo-slider .owl-nav.disabled {
+  display: none;
+}
 /* responsive */
 @media screen and (max-width: 2500px) {}
 
@@ -1201,13 +1258,13 @@ section.certificate_sec {
   margin-bottom: 20px;
 }
 .table_main {
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-}
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
 
-.course-table {
-  width: 800px; /* or however wide your full table needs to be */
-}
+  .course-table {
+    width: 800px; /* or however wide your full table needs to be */
+  }
 section.reasons_choose {
   padding: 30px 10px;
 }
@@ -1272,6 +1329,10 @@ section.introduction_sec {
 }
 section.student_exchange {
   padding: 30px 10px;
+}
+.nav a {
+  font-size: 14px;
+  transform: translateY(0px);
 }
 }
 @media screen and (max-width: 500px) {
@@ -1344,6 +1405,9 @@ p.footer_p1, p.footer_p2 {
 }
 .inner_div img {
   width: auto;
+}
+.nav a {
+  padding: 10px;
 }
 section.bangalore_north_sec {
   padding: 30px 10px;
