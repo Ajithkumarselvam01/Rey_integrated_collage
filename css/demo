@@ -1,0 +1,2831 @@
+@font-face {
+    src: url('../font/Helvetica-Bold.ttf');
+    font-family: 'Helvetica-bold';
+}
+
+@font-face {
+    src: url('../font/Helvetica.ttf');
+    font-family: 'Helvetica-regular';
+}
+
+@font-face {
+    src: url('../font/OpenSansHebrew-Regular.ttf');
+    font-family: 'OpenSansHebrew-regular';
+}
+
+@font-face {
+    src: url('../font/OpenSansHebrew-ExtraBold.ttf');
+    font-family: 'OpenSansHebrew-ExtraBold';
+}
+
+@font-face {
+    src: url('../font/OpenSansHebrew-Light.ttf');
+    font-family: 'OpenSansHebrew-Light';
+}
+
+@font-face {
+    src: url('../font/OpenSansHebrew-Bold.ttf');
+    font-family: 'OpenSansHebrew-Bold';
+}
+
+@font-face {
+    src: url('../font/Poppins-Bold.ttf');
+    font-family: 'Poppins-Bold';
+}
+
+@font-face {
+    src: url('../font/Poppins-Medium.ttf');
+    font-family: 'Poppins-Medium';
+}
+
+@font-face {
+    src: url('../font/Poppins-Regular.ttf');
+    font-family: 'Poppins-Regular';
+}
+
+@font-face {
+    src: url('../font/Poppins-SemiBold.ttf');
+    font-family: 'Poppins-SemiBold';
+}
+
+@font-face {
+    src: url('../font/Inter-Regular.ttf');
+    font-family: 'Inter-Regular';
+}
+
+@font-face {
+    src: url('../font/Inter-SemiBold.ttf');
+    font-family: 'Inter-SemiBold';
+}
+
+html {
+    width: 100%;
+}
+
+body {
+    color: #000;
+    background: #F2F7FD;
+    font-family: 'OpenSansHebrew-regular';
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 65px;
+}
+
+h2 {
+    font-size: 40px;
+}
+
+h3 {
+    font-size: 35px;
+}
+
+h4 {
+    font-size: 30px;
+}
+
+h5 {
+    font-size: 25px;
+}
+
+h6 {
+    font-size: 20px;
+}
+
+p,
+li {
+    font-size: 18px;
+    line-height: 35px;
+    list-style: none;
+}
+
+a,
+a:hover {
+    font-size: 18px;
+    text-decoration: none;
+    color: unset;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+    line-height: normal;
+}
+
+.row {
+    align-items: center;
+}
+
+section {
+    width: 100%;
+    float: left;
+    padding: 50px 0;
+    position: relative;
+}
+
+img {
+    width: 100%;
+}
+
+.sub_heading {
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 72.66px;
+    text-transform: capitalize;
+    font-family: 'Helvetica-bold';
+}
+
+.mob_title {
+    display: none;
+}
+
+
+section p.sub_text {
+    width: 80%;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 35px;
+    vertical-align: middle;
+    margin: 10px auto 30px;
+    font-family: 'Helvetica-regular';
+}
+
+/* button */
+.driver_btn i,
+.down_btn i {
+    margin-left: 10px;
+}
+
+.driver_btn {
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    background: #1674EB;
+    color: #fff;
+    border: none;
+    z-index: 1;
+    padding: 10px 35px;
+    border-radius: 100px;
+    font-size: 18px;
+    text-align: center;
+    font-family: 'OpenSansHebrew-Bold';
+}
+
+.driver_btn:after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 100%;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    color: #000;
+    background-color: #FFF;
+    border-radius: 100px;
+    box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
+        7px 7px 20px 0px rgba(0, 0, 0, .1),
+        4px 4px 5px 0px rgba(0, 0, 0, .1);
+    transition: all 0.3s ease;
+}
+
+.driver_btn:hover {
+    color: #000;
+
+}
+
+.driver_btn:hover:after {
+    left: 0;
+    width: 100%;
+}
+
+.driver_btn:active {
+    top: 2px;
+}
+
+/* unlock growth */
+.cab_btn {
+    position: relative;
+    overflow: hidden;
+    font-family: 'OpenSansHebrew-Bold';
+    background-color: transparent;
+    text-align: center;
+    font-size: 16px;
+    transition: .3s;
+    border-radius: 100px;
+    background: #FFF200;
+    z-index: 1;
+    color: #000;
+}
+
+.cab_btn::before {
+    content: '';
+    width: 0;
+    height: 300%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(25deg);
+    background: #fff;
+    transition: .5s ease;
+    display: block;
+    z-index: -1;
+}
+
+.cab_btn:hover::before {
+    width: 110%;
+}
+
+.cab_btn:hover {
+    color: #111;
+    box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
+        7px 7px 20px 0px rgba(0, 0, 0, .1),
+        4px 4px 5px 0px rgba(0, 0, 0, .1);
+}
+
+
+/* Navigation */
+
+.ezi-header nav {
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    right: 0;
+    top: 0;
+}
+
+section.main_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    bottom: auto;
+    background-color: #F2F7FD;
+    padding: 5px 6.5%;
+}
+
+
+.ezi-header nav .logo {
+    width: 180px;
+    height: auto;
+}
+
+.ezi-header nav .links {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 0;
+    gap: 15px
+}
+
+.ezi-header nav .links li {
+    list-style: none;
+}
+
+.ezi-header nav .links a:not(:has(img)) {
+    display: block;
+    font-size: 18px;
+    color: #000;
+    text-decoration: none;
+    position: relative;
+    font-family: 'Helvetica-bold';
+}
+
+.ezi-header nav .links a:not(:has(img))::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    background-color: #43B317;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out;
+}
+
+.ezi-header .dropdown-parent span::before {
+    content: "\f107";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    position: absolute;
+    right: -20px;
+    top: 55%;
+    transform: translateY(-50%);
+    font-size: 16px;
+    color: #000;
+    transition: all 0.3s;
+}
+
+.ezi-header .dropdown-parent:hover span::before {
+    transform: rotate(180deg);
+    top: -10%;
+}
+
+.ezi-header nav .links a span {
+    position: relative;
+}
+
+.ezi-header .dropdown-parent .dropdown a::after {
+    display: none;
+}
+
+.ezi-header nav .links a img {
+    width: 40px;
+    height: 40px;
+}
+
+.ezi-header .links li {
+    position: relative;
+    margin: 0 15px;
+}
+
+.ezi-header .dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #fff;
+    color: #000;
+    list-style: none;
+    padding: 10px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+
+.ezi-header .dropdown-parent:hover .dropdown {
+    display: block;
+}
+
+.ezi-header nav .links a span {
+    position: relative;
+}
+.ezi-header #nav-toggle {
+    display: none;
+}
+
+/* Mobile specific styles */
+.announce-bar .bar_contact {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.announce_left p {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    color: #fff;
+    font-family: 'Helvetica-regular';
+    text-align: center;
+    width: 50%;
+}
+
+.announce_left p img {
+    width: 70%;
+}
+
+.bar_contact .announce_left {
+    display: flex;
+    gap: 30px;
+    width: 60%;
+}
+
+.announce-bar .announce_ryt {
+    display: flex;
+    justify-content: end;
+    gap: 10px;
+    width: 40%;
+}
+
+section.announce-bar {
+    background: #1674EB;
+    padding: 15px 6.5%;
+}
+
+.announce_ryt a {
+    font-family: 'Helvetica-bold';
+    background: #fff;
+    font-weight: 700;
+    padding: 5px 0;
+    border-radius: 100px;
+    width: 30%;
+    font-size: 17.5px;
+    text-align: center;
+    color: #1674EB;
+    letter-spacing: 0.5px;
+}
+
+.announce_ryt a.downlode_app {
+    background: #FFF200;
+}
+
+.ezi-header nav .icon-burger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+    padding: 20px 8px;
+    background-color: #1674EB;
+}
+
+.ezi-header nav .icon-burger .line {
+    width: 18px;
+    height: 3px;
+    background-color: #FFF200;
+    margin: 2px;
+    transition: all .5s ease-in-out;
+}
+
+header.ezi-header {
+    height: 160px;
+}
+
+.ezi-header .mobile_nav {
+    display: none !important;
+}
+
+.ezi-header .header-side .line {
+    width: 22px;
+    height: 4px;
+    background-color: #FFF200;
+    margin: 4px;
+    transition: all .5s ease-in-out;
+}
+
+.nav_mobside {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #333;
+    flex-direction: column;
+    width: 30%;
+    display: flex;
+    /* Always flex to enable transitions */
+    padding: 10px 0;
+    transition: all 0.3s ease-in-out;
+    transform: translateX(100%);
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000;
+}
+
+.nav_mobside.active {
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
+}
+
+.header-side .hamburger {
+    display: block;
+    cursor: pointer;
+    font-size: 28px;
+    z-index: 1100;
+}
+
+.menu-open .hamburger .line:nth-child(1) {
+    transform: translateY(0px) rotate(225deg);
+}
+
+.menu-open .hamburger .line:nth-child(3) {
+    transform: translateY(-10px) rotate(-225deg);
+}
+
+.menu-open .hamburger .line:nth-child(2) {
+    opacity: 0;
+}
+
+.ezi-header .header-side {
+    background: #1674EB;
+    padding: 30px 15px;
+}
+
+.announce_left p,
+.announce_left p a {
+    font-size: 17px;
+}
+
+/* header end */
+
+/* footer start */
+.social_icon .social_main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+section.social_icon {
+    background: #fff;
+}
+
+section.social_icon .container-fluid {
+    width: 90%;
+    margin: auto;
+}
+
+.social_main .media_logo {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.social_main .media_logo img {
+    width: 20%;
+}
+
+.social_main .owl-nav,
+.social_main .owl-dots {
+    display: none;
+}
+
+.media-text h5,
+.media-text a {
+    font-size: 16px;
+    font-family: 'Inter-SemiBold';
+}
+
+.ezi-footer {
+    width: 100%;
+    float: left;
+}
+
+.footer-mainsec {
+    width: 90%;
+    overflow: hidden;
+    margin: auto;
+    position: relative;
+    z-index: 1;
+}
+
+.footer_readmore .moretext {
+    display: none;
+}
+
+footer.ezi-footer {
+    background: #1674EB;
+    padding: 30px;
+    color: #fff;
+    position: relative;
+}
+
+footer.ezi-footer::after {
+    background-image: url(../image/drive_bg.png);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: 100%;
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 25%;
+    height: 75%;
+    right: 0;
+}
+
+footer.ezi-footer::before {
+    background-image: url(../image/drive_bglft.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 40%;
+    height: 60%;
+    left: 0;
+}
+
+.ezi-footer .row {
+    align-items: start;
+    justify-content: center;
+}
+
+.footer-address .footer-logo {
+    width: 60%;
+}
+
+.footer-address .downlode_app {
+    display: flex;
+    gap: 20px;
+}
+
+.downlode_app img {
+    width: 40%;
+}
+
+.footer-address .location i {
+    font-size: 15px;
+    padding: 5px;
+}
+
+.footer-cab {
+    padding-left: 30px;
+}
+
+.footer-main h5 {
+    font-family: 'Helvetica-regular';
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 15.4px;
+    vertical-align: middle;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 30px 0 20px;
+    padding-bottom: 8px;
+    position: relative;
+}
+
+.footer-main h5::after {
+    content: '';
+    width: 17px;
+    height: 2px;
+    border-bottom: 3px solid #FFF200;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.footer-main .footer-address {
+    margin-top: 20px;
+}
+
+.footer-main ul {
+    padding: 0;
+}
+
+.footer-main li {
+    list-style: none;
+    line-height: normal;
+}
+
+.footer-main li a {
+    list-style: none;
+    font-family: 'Helvetica-regular';
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 25px;
+    letter-spacing: 0.8px;
+    vertical-align: middle;
+}
+
+.footer-main .footer-address p,
+.footer-main .footer-address p a {
+    font-family: 'Helvetica-bold';
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 28px;
+    vertical-align: middle;
+    text-transform: uppercase;
+}
+
+.footcopy-ryt {
+    background: #FFF200;
+    text-align: center;
+    padding: 15px;
+    width: 100%;
+    float: left;
+}
+
+.footcopy-ryt p {
+    font-family: 'Helvetica-bold';
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 25px;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    text-transform: capitalize;
+}
+
+/* footer end */
+/* home page start */
+.banner-section::after {
+    background-image: url(../image/banner_bg.png);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: 100%;
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 80%;
+    height: 90%;
+    right: 0;
+}
+
+.banner-section .banner_row {
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+.banner-section .banner_cont {
+    width: 55%;
+    position: relative;
+}
+
+.banner-section .banner_img {
+    width: 45%;
+}
+
+.banner_cont h1 {
+    font-family: 'Helvetica-bold';
+    font-weight: 700;
+    font-size: 55px;
+    line-height: 80px;
+    vertical-align: middle;
+}
+
+.banner_cont p {
+    font-family: 'Helvetica-regular';
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 35px;
+    vertical-align: middle;
+    margin: 20px 0 10px;
+}
+
+.counter-number .counter-item {
+    display: flex;
+    gap: 30px;
+    text-align: center;
+    justify-content: space-around;
+}
+
+.counter-number .element-number {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    justify-content: center;
+}
+
+.counter-number .counter-innr p {
+    margin: 0;
+    font-size: 18px;
+    line-height: normal;
+    font-family: 'Helvetica-regular';
+    margin-top: -10px;
+    letter-spacing: 0.5px;
+}
+
+.counter-number .number {
+    font-weight: 700;
+    font-size: 42px;
+    text-align: center;
+    vertical-align: middle;
+    text-transform: capitalize;
+    font-family: 'Helvetica-bold';
+    letter-spacing: 1px;
+}
+
+.counter-number .plus {
+    font-family: 'Helvetica-bold';
+    font-weight: 700;
+    font-size: 42px;
+    color: #1674EB;
+    margin-left: 5px;
+    margin-top: -6px;
+}
+
+.banner_cont .counter-number {
+    background: #fff;
+    padding: 25px 10px;
+    margin-top: 30px;
+    width: 95%;
+    border-radius: 6px;
+}
+
+.banner_cont .banner_bttn a {
+    font-size: 20px;
+    margin: 20px 0;
+    padding: 13px 35px;
+    width: 30%;
+    text-align: center;
+}
+
+.banner_cont .banner_bttn {
+    display: flex;
+    gap: 30px;
+}
+
+/* why millon */
+.million_train img {
+    width: 18%;
+}
+
+.whymillion_main {
+    display: flex;
+    justify-content: center;
+}
+
+.whymillion_main .million_tabel {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 30px 0;
+}
+
+.whymillion_main .million_content {
+    width: 65%;
+}
+
+.whymillion_main .million_img {
+    width: 35%;
+    position: relative;
+}
+
+.million_tabel .million_train {
+    width: 33%;
+    text-align: center;
+    padding: 20px 0;
+    border: 2px solid #DEE0DC;
+    border-top: 0;
+    border-left: 0;
+}
+
+.million_train h5 {
+    font-family: 'Poppins-Medium';
+    font-size: 18px;
+    line-height: normal;
+    text-align: center;
+    vertical-align: middle;
+    margin-top: 5px;
+}
+
+.million_train p {
+    font-family: 'Helvetica-regular';
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 30px;
+    letter-spacing: 0%;
+    text-align: center;
+    vertical-align: middle;
+    text-transform: capitalize;
+}
+
+.book_btn a.driver_btn {
+    padding: 15px 40px;
+}
+
+.million_content h2 {
+    margin: 0px 0 10px 30px;
+}
+
+.million_tabel .milli_innr3,
+.million_tabel .milli_innr6,
+.million_tabel .milli_innr9 {
+    border-right: 0;
+}
+
+.million_tabel .milli_innr7,
+.million_tabel .milli_innr8,
+.million_tabel .milli_innr9 {
+    border-bottom: 0;
+}
+
+.whymillion_main .book_btn {
+    text-align: right;
+}
+
+section.why_million {
+    background-image: linear-gradient(90deg, #FFFEF2, transparent);
+    position: relative;
+}
+
+section.why_million::before {
+    background-image: url(../image/banner_bg.png);
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: 100%;
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 60%;
+    height: 80%;
+    left: -47%;
+}
+
+/* service page */
+.service_main .drive_img {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    margin: auto auto 30px;
+}
+
+section.service_sec .service_main {
+    display: flex;
+    position: relative;
+    z-index: 3;
+    align-items: center;
+}
+
+.service_sec .service_driver {
+    width: 50%;
+    background: #fff;
+    padding: 30px;
+    border-radius: 30px;
+    box-shadow: 4px 4px 60px 5px #0033B20D;
+    margin: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.service_sec .service_driver::before {
+    background-image: url(../image/drive_bgryt.png);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 100%;
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 60%;
+    height: 60%;
+    right: 0%;
+}
+
+section.service_sec::after {
+    background-image: url(../image/drive_bgtop.png);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 100%;
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 45%;
+    height: 45%;
+    left: 0%;
+}
+
+section.service_sec::before {
+    background-image: url(../image/drive_bgbottom.png);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 100%;
+    content: '';
+    position: absolute;
+    bottom: -10%;
+    width: 45%;
+    height: 70%;
+    right: 0%;
+}
+
+section.service_sec {
+    overflow: hidden;
+    padding: 70px 0;
+}
+
+.service_main .drive_img img {
+    width: 30%;
+}
+
+.service_driver h3 {
+    font-family: 'Helvetica-bold';
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 47.8px;
+    text-transform: capitalize;
+    margin-bottom: 10px;
+}
+
+.service_driver li {
+    font-family: 'Helvetica-Regular';
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 38px;
+    position: relative;
+}
+
+.service_driver li::before {
+    content: "\f00c";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    position: absolute;
+    left: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 16px;
+    color: #000;
+    transition: all 0.3s;
+}
+
+.drive_img a {
+    padding: 13px 35px;
+    margin-top: 20px;
+}
+
+.drive_img a i {
+    margin: 0;
+}
+
+/* mobile app */
+section.driveapp_sec {
+    background-image: linear-gradient(90deg, #FFFEF2, transparent);
+    padding: 100px 0;
+}
+
+
+.drive_app {
+    display: flex;
+    align-items: center;
+}
+
+.driveapp_cont p {
+    font-family: 'Helvetica-regular';
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 38px;
+    vertical-align: middle;
+    margin: 10px 0 30px;
+}
+
+.drive_app .driveapp_cont {
+    padding-left: 50px;
+}
+
+/* Easy Downlode */
+.down_btn {
+    border: none;
+    border-radius: 100px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    background-color: #1674EB;
+    color: #fff;
+    font-weight: 600;
+    font-size: 18px;
+    text-align: center;
+    display: inline-block;
+    text-decoration: none;
+    transition: all 0.5s ease-in-out;
+    padding: 15px 50px;
+}
+
+.down_btn:hover {
+    box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
+        7px 7px 20px 0px rgba(0, 0, 0, .1),
+        4px 4px 5px 0px rgba(0, 0, 0, .1);
+}
+
+.down_btn::after {
+    content: "\f019";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    height: 60px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #fff;
+    color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(100%);
+    transition: all 0.3s ease-in-out;
+}
+
+.down_btn:hover::after {
+    transform: translateY(0) scale(1.1);
+}
+
+/*  */
+.downlode_scan .travel_main {
+    align-items: center;
+    background: #1674EB;
+    border-radius: 40px;
+    padding: 80px 60px;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+}
+
+.downlode_scan .travel_main::after {
+    background-image: url(../image/app_bg.png);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 100%;
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 30%;
+    height: 70%;
+    left: 0%;
+}
+
+.downlode_scan .travel_main::before {
+    background-image: url(../image/app_topbg.png);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 100%;
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 30%;
+    height: 53%;
+    right: 0%;
+}
+
+
+.travel_lft h2 {
+    line-height: 50px;
+    font-size: 36px;
+    width: 80%;
+}
+
+.travel_main .travel_ryt {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    position: relative;
+}
+
+.app_scanner .scanner {
+    width: 35%;
+    margin: 20px 0 0;
+}
+
+.travel_ryt .app_scanner {
+    background: #fff;
+    border-radius: 10px;
+    width: 50%;
+    padding: 30px;
+    position: relative;
+    color: #000;
+}
+
+.travel_ryt .app_scanner::before {
+    background-image: url(../image/drive_bgryt.png);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 100%;
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 90%;
+    height: 55%;
+    right: 0%;
+}
+
+.travel_lft p {
+    font-family: 'Helvetica-regular';
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 32px;
+    vertical-align: middle;
+    text-transform: capitalize;
+    margin: 15px 0 0;
+}
+
+.travel_lft .counter-item {
+    justify-content: left;
+}
+
+.travel_lft .counter-item span.number {
+    font-family: 'Helvetica-regular';
+    font-weight: 400;
+    line-height: 72.66px;
+    text-transform: capitalize;
+}
+
+.travel_lft .counter-item span.plus {
+    color: #fff;
+    font-family: 'Helvetica-regular';
+    font-weight: 400;
+    margin: auto;
+}
+
+.travel_lft .counter-item p {
+    font-size: 20px;
+    line-height: 42.66px;
+}
+
+.travel_lft .counter-innr {
+    padding-right: 20px;
+    margin: 10px 0;
+    position: relative;
+}
+
+.travel_lft .counter-innr:first-child::before {
+    content: '';
+    position: absolute;
+    border-right: 1px solid #fff;
+    width: 2px;
+    height: 70px;
+    right: -5%;
+    top: 20%;
+}
+
+.travel_ryt .app_scanner .andriod_img {
+    position: absolute;
+    bottom: -2%;
+    right: 0;
+    text-align: right;
+}
+
+.app_scanner .andriod_img img {
+    width: 70%;
+}
+
+.app_scanner h3 {
+    font-family: 'Helvetica-regular';
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 100%;
+    vertical-align: middle;
+}
+
+.app_scanner p {
+    font-family: 'Helvetica-regular';
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 100%;
+    vertical-align: middle;
+    color: #B8B8B8;
+    margin: 15px 0;
+}
+
+.app_scanner a {
+    background: #FFF200;
+    color: #000;
+    border-radius: 100px;
+    padding: 10px 25px;
+    font-size: 15px;
+    line-height: normal;
+}
+
+.app_scanner a::after {
+    height: 50px;
+    top: -5px;
+}
+
+/* client Stories */
+section.testmonial_sec {
+    background-image: linear-gradient(90deg, #FFFEF2, transparent);
+    padding-bottom: 100px;
+}
+
+section.testmonial_sec::before {
+    background-image: url(../image/banner_bg.png);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 100%;
+    content: '';
+    position: absolute;
+    bottom: 18%;
+    width: 60%;
+    height: 70%;
+    right: 0%;
+}
+
+.testmonial_slider .client_img img {
+    width: 10%;
+    margin: auto;
+}
+
+.testmonial_slider .client_review {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    margin: 5px 0 20px;
+    color: #FFD000;
+
+}
+
+
+.testmonial_slider .client_story {
+    text-align: center;
+    background: #fff;
+    width: 92%;
+    margin: auto;
+    padding: 80px 50px 30px;
+    border-radius: 30px;
+    position: relative;
+    margin-top: 65px;
+}
+
+.testmonial_slider .client_story::after {
+    background-image: url(../image/drive_bglft.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 35%;
+    height: 80%;
+    left: 0;
+}
+
+.testmonial_slider .client_img {
+    position: absolute;
+    top: -13%;
+    left: 0;
+    right: 0;
+}
+
+
+
+.testmonial_slider .client_story h5 {
+    font-family: 'Helvetica-bold';
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 44px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.testmonial_slider .client_story p {
+    font-family: 'Helvetica-regular';
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 32px;
+    text-align: center;
+    vertical-align: middle;
+    width: 97%;
+    margin: auto;
+}
+
+.client_story p.client_date {
+    font-size: 19px;
+    color: #1674EB;
+}
+
+
+.testmonial_slider .owl-nav button {
+    position: absolute;
+    top: 50%;
+}
+
+.testmonial_slider .owl-nav button:hover {
+    background: transparent !important;
+}
+
+.testmonial_slider .owl-nav button i {
+    background: #1674EB;
+    color: #fff;
+    font-size: 20px;
+    padding: 30px;
+    border-radius: 100px;
+}
+
+.testmonial_slider .owl-prev {
+    left: 0;
+}
+
+.testmonial_slider .owl-next {
+    right: 0;
+}
+
+/* press release */
+section.press_sec {
+    padding: 70px 0 100px;
+}
+
+section.press_sec::before {
+    background-image: url(../image/drive_bgtop.png);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 100%;
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 45%;
+    height: 45%;
+    left: 0%;
+}
+
+section.press_sec::after {
+    background-image: url(../image/drive_bgbottom.png);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 100%;
+    content: '';
+    position: absolute;
+    bottom: 0%;
+    width: 45%;
+    height: 60%;
+    right: 0%;
+}
+
+.release_lft .latest_release img {
+    height: 260px;
+    object-fit: cover;
+}
+
+.press_main .latest_release {
+    position: relative;
+    border-radius: 20px;
+}
+
+.press_main .latest_release img {
+    border-radius: 20px;
+}
+
+.press_main .latest_innr {
+    position: absolute;
+    bottom: 0;
+    background-image: linear-gradient(0deg, black, transparent);
+    padding: 20px 25px 20px;
+    border-radius: 20px;
+}
+
+.press_sec .press_main {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.press_main .release_lft {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    width: 50%;
+}
+
+.press_main .release_ryt {
+    width: 60%;
+}
+
+.release_lft .latest_release {
+    display: flex;
+    width: 100%;
+}
+
+.press_main .latest_innr h3 {
+    color: #fff;
+    font-family: 'Helvetica-bold';
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 35px;
+    vertical-align: middle;
+    text-transform: capitalize;
+}
+
+.press_main .latest_innr p {
+    font-family: 'Helvetica-regular';
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 32px;
+    vertical-align: middle;
+    color: #fff;
+}
+
+/* responsive */
+@media screen and (max-width: 2500px) {}
+
+@media screen and (max-width: 1700px) {}
+
+
+@media screen and (max-width: 1400px) {
+
+    section.announce-bar,
+    section.main_header {
+        padding: 15px 4%;
+    }
+
+    .ezi-header nav .links a:not(:has(img)) {
+        font-size: 16px;
+    }
+
+    /* main page */
+
+    .banner_cont h1 {
+        font-size: 45px;
+        line-height: 60px;
+    }
+
+    .banner_cont .banner_bttn a {
+        width: auto;
+    }
+
+    .banner_cont .counter-number {
+        width: 100%;
+    }
+
+    .counter-number .number,
+    .counter-number .plus {
+        font-size: 30px;
+    }
+
+    .service_sec .service_driver {
+        height: 550px;
+    }
+
+    .sub_heading {
+        font-size: 35px;
+    }
+}
+
+
+@media screen and (max-width: 1300px) {
+    .footer-main h5 {
+        font-size: 15px;
+        line-height: normal;
+        letter-spacing: 1px;
+        margin: 20px 0;
+    }
+
+    .bar_contact .announce_left {
+        gap: 10px;
+    }
+
+    .announce_left p,
+    .announce_left p a,
+    .announce_ryt a {
+        font-size: 14px;
+    }
+
+    .service_sec .service_driver {
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+
+    .footer-main .footer-address {
+        width: 40%;
+    }
+
+    .footer-main .footer-quick {
+        width: 30%;
+    }
+
+    .footer-main .footer-driver {
+        width: 30%;
+    }
+
+    .footer-main .footer-cab {
+        width: 50%;
+        padding: 15px;
+    }
+
+    .footer-main .footer-other {
+        width: 50%;
+    }
+
+    .ezi-header nav .logo {
+        width: 150px;
+        height: auto;
+    }
+
+    .ezi-header nav .links {
+        margin-bottom: 0;
+        gap: 0;
+    }
+
+    .ezi-header nav .links a:not(:has(img)) {
+        font-size: 14px;
+    }
+
+    .ezi-header .header-side {
+        background: #1674EB;
+        padding: 20px 10px;
+    }
+
+    /* main Page */
+    .banner_cont h1 {
+        font-size: 40px;
+        line-height: 52px;
+    }
+
+    .banner_cont .counter-number {
+        margin: 0;
+    }
+
+    .counter-number .counter-innr p {
+        margin: 0;
+        font-size: 14px;
+    }
+
+    .million_train h5 {
+        font-size: 16px;
+    }
+
+    .million_train p {
+        font-size: 12px;
+    }
+
+    .million_tabel .million_train {
+        padding: 10px 0;
+    }
+
+    .driveapp_cont p {
+        font-size: 16px;
+        line-height: 28px;
+        margin: 10px 0 20px;
+    }
+
+    .downlode_scan .travel_main {
+        padding: 40px 20px;
+    }
+
+    .app_scanner h3 {
+        font-size: 23px;
+    }
+
+    .app_scanner p {
+        font-size: 16px;
+        margin: 10px 0;
+    }
+
+    .app_scanner a {
+        padding: 10px 0;
+        width: 100%;
+        font-size: 15px;
+    }
+
+    .travel_lft h2 {
+        line-height: 50px;
+        font-size: 32px;
+        width: 80%;
+    }
+
+    .travel_lft .counter-item span.plus {
+        font-size: 30px;
+        margin: 0;
+    }
+
+
+    .travel_lft p {
+        margin: 10px 0 0;
+    }
+
+    .testmonial_slider .client_img {
+        top: -5%;
+    }
+
+
+}
+
+@media screen and (max-width: 1100px) {
+
+
+    section.social_icon .container-fluid {
+        width: 95%;
+        margin: auto;
+    }
+
+    .social_main .media_logo {
+        gap: 10px;
+    }
+
+    .announce_left p,
+    .announce_left p a,
+    .announce_ryt a {
+        font-size: 12px;
+    }
+
+
+
+
+}
+
+@media screen and (max-width: 992px) {
+
+
+    .ezi-header .mobile_nav,
+    .ezi-header .header-side {
+        display: none !important;
+    }
+
+    .ezi-header .desktop_nav {
+        display: block !important;
+    }
+
+    .ezi-header nav .links {
+        position: fixed;
+        z-index: 9;
+        top: 100px;
+        left: 0;
+        right: 0;
+        bottom: 100%;
+        flex-direction: column;
+        background-color: #fff;
+        justify-content: flex-start;
+        align-items: center;
+        transition: all 0.5s ease-in-out;
+        overflow: hidden;
+        height: 0;
+    }
+
+    header.ezi-header {
+        height: 70px;
+    }
+
+    .ezi-header nav .links a:not(:has(img)) {
+        font-size: 20px;
+        color: #000000;
+    }
+
+    .ezi-header nav .links {
+        gap: 0px;
+        padding-left: 0;
+    }
+
+    .ezi-header nav .icon-burger {
+        display: flex;
+    }
+
+    nav .icon-burger .line {
+        width: 30px;
+    }
+
+    .ezi-header #nav-toggle:checked~.links {
+        height: 92%;
+        top: 4.4rem;
+        padding: 30px 0;
+    }
+
+    .ezi-header .links li .dropdown li {
+        padding: 0;
+    }
+
+    .ezi-header .dropdown-parent span::before {
+        right: -20px;
+        color: #000;
+        transition: all 0.3s;
+    }
+
+    .ezi-header .dropdown-parent:hover span::before {
+        top: -0.4rem;
+    }
+
+    /* Animate burger icon */
+    .ezi-header #nav-toggle:checked~.icon-burger .line:nth-child(1) {
+        transform: translateY(10px) rotate(225deg);
+    }
+
+    .ezi-header #nav-toggle:checked~.icon-burger .line:nth-child(3) {
+        transform: translateY(-10px) rotate(-225deg);
+    }
+
+    .ezi-header #nav-toggle:checked~.icon-burger .line:nth-child(2) {
+        opacity: 0;
+    }
+
+    .element-number span {
+        font-size: 65px;
+    }
+
+    section.counter-main {
+        margin: 0px;
+    }
+
+    .ezi-header #nav-toggle:checked~.links {
+        display: flex;
+    }
+
+    .ezi-header .dropdown {
+        display: none;
+        position: relative;
+        top: 0%;
+        width: 100%;
+        left: -2%;
+        background: #fff;
+        color: #000;
+        list-style: none;
+        padding: 10px 0;
+        box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .ezi-header .links li {
+        width: 100%;
+    }
+
+    .ezi-header li.header-btn {
+        position: absolute;
+        bottom: 3%;
+        padding-left: 0;
+    }
+
+    section.announce-bar {
+        display: none;
+    }
+
+    section.main_header {
+        padding: 5px 5%;
+    }
+
+    /* footer */
+
+    .social_icon .social_main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        flex-wrap: wrap;
+    }
+
+    /* main pgaes */
+
+    .mob_title {
+        text-align: center;
+        margin-bottom: 30px;
+        display: block;
+    }
+
+    .desk_title,
+    .banner_cont .counter-number {
+        display: none;
+    }
+
+    .banner-section .banner_row {
+        flex-wrap: wrap;
+        gap: 30px;
+        text-align: center;
+    }
+
+    .banner_cont h1 {
+        font-size: 32px;
+        line-height: 38px;
+    }
+
+    .whymillion_main {
+        flex-wrap: wrap;
+        gap: 0px;
+    }
+
+    section.service_sec .service_main {
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+
+    .banner-section .banner_cont,
+    .banner-section .banner_img {
+        width: 100%;
+    }
+
+    .banner_cont .banner_bttn {
+        justify-content: center;
+    }
+
+    .whymillion_main .million_img,
+    .whymillion_main .million_content {
+        width: 100%;
+        position: relative;
+        text-align: center;
+    }
+
+    .million_img img {
+        width: 80%;
+        margin: auto;
+    }
+
+    .million_train p {
+        font-size: 12px;
+        line-height: 25px;
+    }
+
+    .service_sec .service_driver {
+        width: 100%;
+        margin: auto;
+    }
+
+    .downlode_scan .travel_main {
+        gap: 30px;
+    }
+
+    .row {
+        width: 100%;
+        margin: auto;
+    }
+
+    .testmonial_slider .owl-nav button i {
+        font-size: 14px;
+        padding: 15px;
+    }
+
+    .press_sec .press_main {
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+    }
+
+    .press_main>div {
+        width: 100% !important;
+    }
+
+    .release_lft .latest_release img {
+        height: auto;
+        object-fit: cover;
+    }
+
+
+    .drive_app {
+        gap: 30px;
+    }
+
+
+
+}
+
+
+
+@media screen and (max-width: 767px) {
+    .ezi-footer .row>div {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .footer-main .footer-address {
+        margin-bottom: 30px !important;
+    }
+
+    /* footer end */
+
+    .sub_heading {
+        line-height: 40px;
+        margin-bottom: 20px;
+    }
+
+    section p.sub_text {
+        width: 100%;
+        font-size: 16px;
+        line-height: 25px;
+    }
+
+    .testmonial_slider .client_img img {
+        width: 18%;
+        margin: auto;
+    }
+
+    .testmonial_slider .client_story h5 {
+        font-size: 24px;
+        line-height: 30px;
+    }
+
+    .testmonial_slider .client_story p {
+        margin: 10px 0;
+    }
+
+    .travel_lft .counter-item span.number {
+        line-height: normal;
+    }
+
+    .travel_lft .counter-innr:first-child::before {
+        right: -5%;
+        height: 60px;
+    }
+
+    .travel_lft .counter-item {
+        gap: 25px;
+        justify-content: center;
+    }
+
+    .travel_main .travel_lft {
+        text-align: center;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+
+    /* footer */
+    footer.ezi-footer {
+        padding: 30px 0;
+    }
+
+    .footer-main .footer-address p,
+    .footer-main .footer-address p a {
+        font-size: 12px;
+    }
+
+    /* footer */
+
+    /* main Page */
+    section.banner-section {
+        padding-top: 30px;
+    }
+
+    .banner_cont p {
+        font-size: 16px;
+        line-height: 28px;
+    }
+
+    .banner_cont .banner_bttn a {
+        width: 50%;
+        font-size: 14px;
+        padding: 10px 25px;
+        margin: 10px 0 15px;
+    }
+
+    .banner-section .banner_row {
+        gap: 10px;
+    }
+
+    .banner_cont .banner_bttn {
+        gap: 20px;
+    }
+
+    section.why_million {
+        background-image: linear-gradient(90deg, #FFFEF2, transparent);
+    }
+
+    .whymillion_main .million_tabel {
+        margin: 0;
+    }
+
+    .million_train img {
+        width: 30%;
+    }
+
+    section.testmonial_sec {
+        padding-bottom: 50px;
+    }
+
+    .travel_main .travel_ryt {
+        flex-wrap: wrap;
+    }
+
+    .travel_ryt .app_scanner {
+        width: 90%;
+        margin: auto;
+    }
+
+    .million_tabel .million_train {
+        padding: 10px;
+        width: 50%;
+        border: 0;
+        border-bottom: 2px solid #DEE0DC;
+    }
+
+    .million_tabel .milli_innr1,
+    .million_tabel .milli_innr3,
+    .million_tabel .milli_innr7,
+    .million_tabel .milli_innr9,
+    .million_tabel .milli_innr5 {
+        border-right: 2px solid #DEE0DC;
+    }
+
+    .million_tabel .milli_innr9 {
+        border-bottom: 0;
+    }
+
+    .million_train p {
+        font-size: 12px;
+        line-height: 16px;
+        margin-top: 8px;
+    }
+
+    .whymillion_main .book_btn {
+        text-align: right;
+        position: absolute;
+        right: 3%;
+        bottom: 8%;
+    }
+
+    .service_driver li {
+        font-size: 15px;
+        line-height: 28px;
+        margin-bottom: 10px;
+    }
+
+    .service_driver li::before {
+        top: 28%;
+    }
+
+    .drive_app .driveapp_cont {
+        padding-left: 0;
+    }
+
+    section.driveapp_sec {
+        padding: 50px 0;
+        text-align: center;
+    }
+
+    .travel_lft h2 {
+        line-height: 38px;
+        width: 100%;
+    }
+
+    .travel_lft .counter-item p {
+        font-size: 15px;
+        line-height: 25px;
+    }
+
+    .app_scanner a {
+        padding: 10px 30px;
+        width: auto;
+        font-size: 15px;
+        margin: 10px 0
+    }
+
+    .app_scanner .scanner {
+        width: 35%;
+        margin: auto;
+    }
+
+
+
+    .testmonial_slider .client_story p {
+        font-size: 16px;
+        line-height: 25px;
+        width: 100%;
+    }
+
+    .testmonial_slider .client_story {
+        padding: 20px;
+        border-radius: 30px;
+        position: relative;
+        margin-top: 0px;
+        width: 100%;
+    }
+
+    .testmonial_slider .client_img {
+        position: unset;
+        margin-bottom: 30px;
+    }
+
+    .testmonial_slider .owl-nav button i {
+        font-size: 12px;
+        padding: 12px;
+    }
+
+    .testmonial_slider .owl-next {
+        right: -4%;
+    }
+
+    .testmonial_slider .owl-prev {
+        left: -4%;
+    }
+
+    .press_main .latest_innr h3 {
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    .press_main .latest_innr p {
+        font-size: 14px;
+        line-height: 18px;
+    }
+
+    .travel_lft p,
+    .driveapp_cont p {
+        font-size: 16px;
+        line-height: 28px;
+    }
+
+    section.service_sec::after,
+    .downlode_scan .travel_main::before,
+    section.press_sec::before,
+    .service_sec .service_driver::before,
+    .downlode_scan .travel_main::after {
+        width: 80%;
+    }
+
+    .banner-section::after {
+        width: 140%;
+    }
+
+    .footer-main li a {
+        font-size: 16px
+    }
+
+
+}
+
+@media screen and (max-width: 500px) {
+    .social_main .media_logo img {
+        width: 20%;
+    }
+
+    .book_btn a.driver_btn {
+        /* padding: 10px 20px; */
+        font-size: 12px;
+    }
+
+    .downlode_scan .travel_main {
+        padding: 40px 10px;
+    }
+
+    .drive_img a {
+        padding: 10px 25px;
+        margin-top: 20px;
+    }
+
+
+}
+
+
+@media screen and (max-width: 450px) {
+
+    .testmonial_slider .client_img img {
+        width: 25%;
+        margin: auto;
+    }
+
+    .down_btn {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .book_btn a.driver_btn {
+        padding: 10px 20px;
+        font-size: 12px;
+    }
+
+    .travel_lft h2 {
+        line-height: 38px;
+        width: 100%;
+        font-size: 27px;
+    }
+}
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Ezi Drive</title>
+	<!-- Required css -->
+
+	<link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="./css/owl.carousel.min.css">
+	<link rel="stylesheet" type="text/css" href="./css/owl.theme.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+		integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+	<!-- custom css  -->
+	<link rel="stylesheet" type="text/css" href="./css/style.css">
+</head>
+
+<body>
+
+	<header class="ezi-header">
+		<!-- NAV_BAR_SECTION START -->
+		<nav>
+			<section class="announce-bar">
+				<div class="bar_contact">
+					<div class="announce_left">
+						<p><span><img src="./image/call_btn.png" alt=""></span>Bengaluru: <span><a
+									href="tel:08042400000">(080) 424-00-000</a></span> / <span><a
+									href="tel:08067000000">67-000-000</a></span></p>
+						<p><span><img src="./image/call_btn.png" alt=""></span>Chennai: <span><a
+									href="tel:8822800800">8822800800</a></span> / <span><a
+									href="tel:08067000010">08067000010</a></span></p>
+					</div>
+					<div class="announce_ryt">
+						<a href="">Sing In</a>
+						<a href="">Sing Up</a>
+						<a class="downlode_app" href="">Downlode App</a>
+					</div>
+				</div>
+			</section>
+			<section class="main_header">
+				<input type="checkbox" id="nav-toggle">
+				<div class="logo">
+					<a href="/">
+						<img src="./image/ezi_logo.png" alt="Reymart-Logo" title="Reymart-Logo">
+					</a>
+				</div>
+				<ul class="links desktop_nav">
+					<li><a href="#home">Home</a></li>
+					<li><a href="#work">About Us</a></li>
+					<li><a href="#">Driver Hire</a></li>
+					<li><a href="#work">Cab Hire</a></li>
+					<li><a href="#work">Business Services</a></li>
+					<li><a href="#work">Contact Us</a></li>
+					<li class="mx-0">
+						<div class="header-side">
+							<div class="hamburger" id="hamburger">
+								<div class="line"></div>
+								<div class="line"></div>
+								<div class="line"></div>
+							</div>
+						</div>
+					</li>
+				</ul>
+				<ul class="links mobile_nav">
+					<li><a href="#home">Home</a></li>
+					<li class="dropdown-parent">
+						<a href="#about"><span>Services Offered</span></a>
+						<ul class="dropdown">
+							<li><a href="#service1">Service 1</a></li>
+							<li><a href="#service2">Service 2</a></li>
+							<li><a href="#service3">Service 3</a></li>
+						</ul>
+					</li>
+					<li><a href="#work">About Us</a></li>
+					<li><a href="#">Driver Hire</a></li>
+					<li><a href="#work">Cab Hire</a></li>
+					<li><a href="#work">Business Services</a></li>
+					<li><a href="#work">Contact Us</a></li>
+				</ul>
+				<label for="nav-toggle" class="icon-burger">
+					<div class="line"></div>
+					<div class="line"></div>
+					<div class="line"></div>
+				</label>
+
+				<!-- side header buttion -->
+				<div class="nav_mobside" id="nav_mobside">
+					<a href="#">Home</a>
+					<a href="#">About</a>
+					<a href="#">Services</a>
+					<a href="#">Contact</a>
+				</div>
+			</section>
+
+		</nav><!-- NAV_BAR_SECTION END -->
+	</header>
+	<!-- Main Section start -->
+	<section class="banner-section">
+		<div class="container">
+			<div class="banner_row">
+				<div class="banner_cont">
+					<h1>Hire a Driver or Book a Cab Safe, Easy & Quick!</h1>
+					<p>Experience fast, reliable, and professional driver services with easy booking and instant
+						confirmation.</p>
+					<div class="banner_bttn">
+						<a class="driver_btn" href="">Hire Driver</a>
+						<a class="cab_btn" href="">Hire Cab</a>
+					</div>
+					<div class="counter-number">
+						<div class="counter-item">
+							<!--  -->
+							<div class="counter-innr">
+								<div class="element-number"><span class="number" data-target="15">0</span><span
+										class="plus">+</span></div>
+								<p>Years of Service</p>
+							</div>
+							<!--  -->
+							<div class="counter-innr">
+								<div class="element-number"><span class="number" data-target="200000">0</span><span
+										class="plus">+</span></div>
+								<p>Happy Customers</p>
+							</div>
+							<!--  -->
+							<div class="counter-innr">
+								<div class="element-number"><span class="number" data-target="3300000">0</span><span
+										class="plus">+</span></div>
+								<p>Rides Completed</p>
+							</div>
+							<!--  -->
+						</div>
+					</div>
+				</div>
+				<div class="banner_img">
+					<img src="./image/banner_img.png" alt="Ezi Drive Banner">
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- why million -->
+	<section class="why_million">
+		<div class="container">
+			<h2 class="sub_heading mob_title">Why millions trust ezi drive!</h2>
+			<div class="whymillion_main">
+				<div class="million_img">
+					<img src="./image/why_million.png" alt="">
+				</div>
+				<div class="million_content">
+					<h2 class="sub_heading desk_title">Why millions trust ezi drive!</h2>
+					<div class="million_tabel">
+						<div class="million_train milli_innr1">
+							<img src="./image/million_1.png" alt="">
+							<h5>Driver Training</h5>
+							<p>Regular Workshops</p>
+						</div>
+						<!--  -->
+						<div class="million_train milli_innr2">
+							<img src="./image/million_2.png" alt="">
+							<h5>24 / 7 customer care</h5>
+							<p>for all 365 days in a year</p>
+						</div>
+						<!--  -->
+						<div class="million_train milli_innr3">
+							<img src="./image/million_3.png" alt="">
+							<h5>App bookings</h5>
+							<p>both iOS & Android</p>
+						</div>
+						<!--  -->
+						<div class="million_train milli_innr4">
+							<img src="./image/million_4.png" alt="">
+							<h5>33,00,000+</h5>
+							<p>SUCCESSFUL BOOKINGS</p>
+						</div>
+						<!--  -->
+						<div class="million_train milli_innr5">
+							<img src="./image/million_5.png" alt="">
+							<h5>200,000+</h5>
+							<p>SATISFIED CUSTOMERS</p>
+						</div>
+						<!--  -->
+						<div class="million_train milli_innr6">
+							<img src="./image/million_6.png" alt="">
+							<h5>15+</h5>
+							<p>Years of service</p>
+						</div>
+						<!--  -->
+						<div class="million_train milli_innr7">
+							<img src="./image/million_7.png" alt="">
+							<h5>Trip Insurance</h5>
+							<p>for as low as Rs.20 per trip</p>
+						</div>
+						<!--  -->
+						<div class="million_train milli_innr8">
+							<img src="./image/million_8.png" alt="">
+							<h5>Real Time Tracking</h5>
+							<p>Drivers and Cabs</p>
+						</div>
+						<!--  -->
+						<div class="million_train milli_innr9">
+							<img src="./image/million_9.png" alt="">
+							<h5>Background Verification</h5>
+							<p>incl. criminal background checks</p>
+						</div>
+						<!--  -->
+					</div>
+					<div class="book_btn">
+						<a class="driver_btn" href="">Book now <span><i
+									class="fa-solid fa-arrow-right-long"></i></span></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Services -->
+	<section class="service_sec">
+		<div class="container">
+			<div class="service_heading text-center">
+				<h2 class="sub_heading">Our Services</h2>
+				<p class="sub_text">Discover reliable and professional services tailored to your needs. From easy
+					bookings to a seamless
+					experience, we ensure convenience, safety, and efficiency every step of the way.</p>
+			</div>
+			<div class="service_main">
+				<div class="service_driver">
+					<div class="driver_serinnr">
+						<div class="drive_img">
+							<img src="./image/service_img1.png" alt="">
+							<a class="driver_btn" href=""><i class="fa-solid fa-arrow-right-long"></i></a>
+						</div>
+						<h3>Driver Hire</h3>
+						<ul>
+							<li>15+ Years of Leadership in Driver Hire Services</li>
+							<li>33,00,000+ Successful Bookings & 200,000+ Satisfied Customers</li>
+							<li>Serving Bengaluru & Chennai – Expanding Soon!</li>
+							<li>Experienced, Reliable, and Professional Drivers</li>
+							<li>Thorough Criminal Background Checks for Safety</li>
+						</ul>
+					</div>
+				</div>
+				<!--  -->
+				<div class="service_driver">
+					<div class="driver_serinnr">
+						<div class="drive_img">
+							<img src="./image/service_img2.png" alt="">
+							<a class="driver_btn" href=""><i class="fa-solid fa-arrow-right-long"></i></a>
+						</div>
+						<h3>Cab Hire</h3>
+						<ul>
+							<li>Leading cab service in Bengaluru & Chennai</li>
+							<li>150+ fleet with on-demand & dedicated vehicles</li>
+							<li>Options: Indica, Sedan, Xylol, Innova, Tempo Traveler & more</li>
+							<li>Office commutes & long-term deployments available</li>
+							<li>Services: One-way, round trips, airport & outstation travel</li>
+						</ul>
+					</div>
+				</div>
+				<!--  -->
+			</div>
+		</div>
+	</section>
+	<!-- Mobile app -->
+	<section class="driveapp_sec">
+		<div class="container">
+			<h2 class="sub_heading mob_title">Ezi Drive Mobile App</h2>
+			<div class="drive_app row">
+				<div class="driveapp_img col-lg-5">
+					<img src="./image/drive_banner.png" alt="Mobile App">
+				</div>
+				<div class="driveapp_cont col-lg-7">
+					<h2 class="sub_heading desk_title">Ezi Drive Mobile App</h2>
+					<p>Ezi Drive is a pioneer in driver hire services and a leading provider of cab hire and online
+						booking in Bengaluru and Chennai. With a large pool of verified, professional drivers, we ensure
+						reliable service backed by advanced IT infrastructure. Our 24/7 support and robust software
+						system enable seamless bookings via phone, online portal, or mobile app. The Ezi Drive app,
+						available on Android and iOS, offers features like real-time tracking, cashless payments, SOS
+						function, driver identification, trip feedback, and booking history for a hassle-free
+						experience.</p>
+					<div class="book_btn"><!-- Downlode btn start -->
+						<a class="down_btn" href="">Downlode App <span><i
+									class="fa-solid fa-arrow-right-long"></i></span></a>
+					</div><!-- Downlode btn end -->
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Downlode App -->
+	<section class="downlode_scan">
+		<div class="container">
+			<div class="travel_main row">
+				<div class="travel_lft col-lg-6">
+					<h2 class="sub_heading">Download our app and travel with ease!</h2>
+					<p>Simplify your journey with just a tap! Get our app today for a seamless and reliable travel
+						experience.</p>
+					<div class="counter-number">
+						<div class="counter-item">
+							<!--  -->
+							<div class="counter-innr">
+								<div class="element-number"><span class="number" data-target="100">0</span><span
+										class="plus">K+</span></div>
+								<p>Downloads</p>
+							</div>
+							<!--  -->
+							<div class="counter-innr">
+								<div class="element-number"><span class="number" data-target="50">0</span><span
+										class="plus">K+</span></div>
+								<p>Active Users</p>
+							</div>
+							<!--  -->
+						</div>
+					</div>
+				</div>
+				<div class="travel_ryt col-lg-6">
+					<div class="app_scanner">
+						<h3>For Android</h3>
+						<p>Android 8.0+</p>
+						<a class="down_btn" href="">Downlode App</a>
+						<div>
+							<img class="scanner" src="./image/app_scan.png" alt="QR Scanner">
+						</div>
+						<div class="andriod_img">
+							<img src="./image/android_img.png" alt="">
+						</div>
+
+					</div>
+					<!--  -->
+					<div class="app_scanner">
+						<h3>For iOS</h3>
+						<p>iOS 15.6+</p>
+						<a class="down_btn" href="">Downlode App</a>
+						<div>
+							<img class="scanner" src="./image/app_scan.png" alt="QR Scanner">
+						</div>
+						<div class="andriod_img">
+							<img src="./image/apple_img.png" alt="">
+						</div>
+					</div>
+					<!--  -->
+				</div>
+			</div>
+	</section>
+	<!-- Testmonial Sec -->
+	<section class="testmonial_sec">
+		<div class="container">
+			<div class="text-center">
+				<h2 class="sub_heading">what our customer says</h2>
+				<p class="sub_text">See what our customers say about our cab and driver services reliable, safe, and
+					trusted for a comfortable journey every time.</p>
+			</div>
+			<div class="tesmonial_main">
+				<div class="testmonial_slider owl-carousel owl-theme">
+					<!--  -->
+					<div class="client_story">
+						<div class="client_img">
+							<img src="./image/testmonial_img.png" alt="">
+						</div>
+						<h5>Elodie and Trevor Dincuff</h5>
+						<p class="client_date">01-Mar-2024</p>
+						<div class="client_review">
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+						</div>
+						<p>We had the pleasure of spending an entire week with Sir Nithyananthan. P as our designated
+							cab driver for Ezi Drive in Tamil Nadu, and this was an amazing experience. Sir
+							Nithyananthan. P has shown professionalism, punctuality, and courtesy throughout our
+							journey. His driving skills were impeccable, ensuring our safety and comfort. Sir
+							Nithyananthan. P has navigated through various terrains and traffic conditions with ease,
+							while also providing insightful commentary and recommendations. Our overall trip experience
+							in Tamil Nadu has been enhanced thanks to Sir Nithyananthan. P and Madam Hema from customer
+							relations of Ezi Drive who supported our travel schedule. Thank you very much and all the
+							best</p>
+					</div>
+					<!--  -->
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Press Release -->
+	<section class="press_sec">
+		<div class="container">
+			<div class="text-center">
+				<h2 class="sub_heading">Press Releases</h2>
+				<p class="sub_text">Stay updated with our latest press releases—important announcements, company news,
+					and industry insights, all in one place.</p>
+			</div>
+			<div class="press_main">
+				<div class="release_lft">
+					<!--  -->
+					<div class="latest_release">
+						<img src="./image/press_img.png" alt="">
+						<div class="latest_innr">
+							<h3>Ezi Drive’s story, or how to scale a startup without VC help</h3>
+						</div>
+					</div>
+					<!--  -->
+					<div class="latest_release">
+						<img src="./image/press_img.png" alt="">
+						<div class="latest_innr">
+							<h3>Ezi Drive’s story, or how to scale a startup without VC help</h3>
+						</div>
+					</div>
+					<!--  -->
+				</div>
+				<div class="release_ryt">
+					<div class="latest_release">
+						<img src="./image/press_img.png" alt="">
+						<div class="latest_innr">
+							<h3>Ezi Drive’s story, or how to scale a startup without VC help</h3>
+							<p>A month ago, I was meeting some friends for lunch. It was a weekend, and food orders
+								somehow quickly morphed into beer orders.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Main Section end -->
+	<!-- footer -->
+	<section class="social_icon">
+		<div class="container-fluid"><!-- container start -->
+			<div class="social_main owl-carousel owl-theme"><!-- row start -->
+				<div class="media_logo">
+					<img src="./image/instagram.png" alt="Instagram logo">
+					<div class="media-text">
+						<h5>Instagram</h5>
+						<a href="">@ezidrivetravel</a>
+					</div>
+				</div>
+				<!--  -->
+				<div class="media_logo">
+					<img src="./image/twitter.png" alt="Twitter logo">
+					<div class="media-text">
+						<h5>X</h5>
+						<a href="">@ezidrivetravel</a>
+					</div>
+				</div>
+				<!--  -->
+				<div class="media_logo">
+					<img src="./image/linkedin.png" alt="Linkedin logo">
+					<div class="media-text">
+						<h5>LinkedIn</h5>
+						<a href="">@ezidrivetravel</a>
+					</div>
+				</div>
+				<!--  -->
+				<div class="media_logo">
+					<img src="./image/facebook.png" alt="Facebook logo">
+					<div class="media-text">
+						<h5>Facebook</h5>
+						<a href="">@ezidrivetravel</a>
+					</div>
+				</div>
+				<!--  -->
+				<div class="media_logo">
+					<img src="./image/pinterest.png" alt="Pinterest logo">
+					<div class="media-text">
+						<h5>Pinterest</h5>
+						<a href="">@ezidrivetravel</a>
+					</div>
+				</div>
+				<!--  -->
+			</div><!-- row end -->
+		</div><!-- container end -->
+	</section>
+	<footer class="ezi-footer">
+		<div class="footer-mainsec">
+			<div class="footer-main row">
+				<div class="footer-address col-lg-3">
+					<img class="footer-logo" src="./image/ezi_logo.png" alt="">
+					<div class="location">
+						<h5>OUR LOCATIONS</h5>
+						<p><span><i class="fa-solid fa-location-dot"></i></span>Bengaluru: <span><a
+									href="tel:08042400000">(080) 42400000</a></span> / <span><a
+									href="tel:08067000000">67000000</a></span></p>
+						<p><span><i class="fa-solid fa-location-dot"></i></span>Chennai: <span><a
+									href="tel:8822800800">8822800800</a></span> / <span><a
+									href="tel:08067000010">08067000010</a></span></p>
+					</div>
+					<h5>Download APP</h5>
+					<div class="downlode_app">
+						<img src="./image/apple_footer.png" alt="App Store">
+						<img src="./image/playstore.png" alt="Play store">
+					</div>
+
+				</div>
+				<div class="footer-quick col-lg-2">
+					<h5>Quick Links</h5>
+					<ul>
+						<li><a href="">Blog</a></li>
+						<li><a href="">Testimonials</a></li>
+						<li><a href="">Careers</a></li>
+						<li><a href="">Terms & Conditions</a></li>
+						<li><a href="">Privacy Policy</a></li>
+						<li><a href="">FAQ</a></li>
+						<li><a href="">Site Map</a></li>
+					</ul>
+				</div>
+				<div class="footer-driver col-lg-2">
+					<h5>DRIVER SERVICES</h5>
+					<ul>
+						<li><a href="">Driver Hire</a></li>
+						<li><a href="">Driver Hire Bangalore</a></li>
+						<li><a href="">Driver Hire Chennai</a></li>
+						<li><a href="">Call Drivers</a></li>
+						<li><a href="">Part Time Drivers</a></li>
+						<li><a href="">Office Pick and Drop</a></li>
+						<li><a href="">Valet Parking Drivers</a></li>
+						<li><a href="">Permanent Driver</a></li>
+						<li><a href="">Night Drivers</a></li>
+						<li><a href="">Outstation Drivers</a></li>
+					</ul>
+				</div>
+				<div class="footer-cab col-lg-3">
+					<h5>CAB HIRE SERVICES</h5>
+					<ul>
+						<li><a href="">Cab Hire</a></li>
+						<li><a href="">Cab Hire Bangalore</a></li>
+						<li><a href="">Cab Hire Chennai</a></li>
+						<li><a href="">Call Taxi</a></li>
+						<li><a href="">Car Rental</a></li>
+						<li><a href="">Airport Taxi</a></li>
+						<li><a href="">Outstation Cabs</a></li>
+						<li><a href="">Outstation Cabs Bangalore</a></li>
+						<li><a href="">Outstation Cabs Chennai</a></li>
+						<li><a href="">Online Cab Booking</a></li>
+						<li><a href="">Cab Hire Office Pickup Drop Services</a></li>
+					</ul>
+				</div>
+				<div class="footer-other col-lg-2">
+					<h5>Other links</h5>
+					<ul>
+						<li><a href="">Ezi Rewards</a></li>
+						<li><a href="">Disclaimer</a></li>
+						<li><a href="">Clients</a></li>
+						<li><a href="">Press & Media</a></li>
+						<li><a href="">Agency Login</a></li>
+						<li><a href="">Ezi Holiday</a></li>
+						<li><a href="">Become A Driver</a></li>
+						<li><a href="">B2B Driver Services</a></li>
+					</ul>
+				</div>
+			</div>
+
+			<!-- read  more -->
+			<div class="footer_readmore">
+				<div class="fooor_article row  moretext">
+					<div class="fooor_botom col-lg-3">
+						<div class="foot_subread">
+							<ul>
+								<li><a href="">Ezi Rewards</a></li>
+								<li><a href="">Disclaimer</a></li>
+								<li><a href="">Clients</a></li>
+								<li><a href="">Press & Media</a></li>
+								<li><a href="">Agency Login</a></li>
+								<li><a href="">Ezi Holiday</a></li>
+								<li><a href="">Become A Driver</a></li>
+								<li><a href="">B2B Driver Services</a></li>
+							</ul>
+						</div>
+						<!--  -->
+
+
+					</div>
+				</div>
+				<a class="moreless-button" href="javascript:void(0)">More Links</a>
+			</div>
+			<!-- read more -->
+		</div>
+	</footer>
+	<div class="footcopy-ryt">
+		<p>© EZI DRIVE TOURS & TRAVELS PVT. LTD. ALL RIGHTS RESERVED.</p>
+	</div>
+
+	<!-- footer -->
+	<script type="text/javascript" src="./js/jquery.min.js"></script>
+	<script type="text/javascript" src="./js/bootstrap.bundle.min.js"></script>
+	<script type="text/javascript" src="./js/owl.carousel.min.js"></script>
+	<script type="text/javascript" src="./js/myscript.js"></script>
+
+</body>
+
+</html>
